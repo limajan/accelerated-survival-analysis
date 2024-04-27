@@ -1,2 +1,5 @@
-# accelerated-survival-analysis
-Accelerated class of survival models.
+accelerated-survival-analysis
+================
+limajan
+
+# Edit
