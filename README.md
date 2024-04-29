@@ -1,11 +1,6 @@
 Accelerated survival analysis
 ================
 
-<style>
-body {
-text-align: justify}
-</style>
-
 Os modelos de regressão de sobrevivência de classe acelerada são um
 grupo de técnicas estatísticas usadas para analisar dados em que a
 variável de resultado é o tempo até um evento, também conhecidos como
