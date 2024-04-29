@@ -11,8 +11,6 @@ sobrevivência padrão por incorporarem o efeito das covariáveis na
 própria escala de tempo, em vez de apenas na taxa de risco. Aqui está
 uma análise dos três tipos principais (AFT, AH, AO):
 
-</div>
-
 ### 1 - Modelo de tempo de falha acelerado (AFT model)
 
 O *AFT model* é uma abordagem paramétrica (ou semiparamétrica) que
@@ -170,3 +168,5 @@ subjacente é incerta (BURZYKOWSKI, 2022).
   p. 686-694, 2014.
 - KALBFLEISCH, John D.; PRENTICE, Ross L. **The statistical analysis of
   failure time data**. John Wiley & Sons, 2002.
+
+</div>
