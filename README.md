@@ -1,6 +1,8 @@
 Accelerated survival analysis
 ================
 
+<div align="justify">
+
 Os modelos de regressão de sobrevivência de classe acelerada são um
 grupo de técnicas estatísticas usadas para analisar dados em que a
 variável de resultado é o tempo até um evento, também conhecidos como
@@ -8,6 +10,8 @@ dados de sobrevivência. Estes modelos diferem dos modelos de
 sobrevivência padrão por incorporarem o efeito das covariáveis na
 própria escala de tempo, em vez de apenas na taxa de risco. Aqui está
 uma análise dos três tipos principais (AFT, AH, AO):
+
+</div>
 
 ### 1 - Modelo de tempo de falha acelerado (AFT model)
 
