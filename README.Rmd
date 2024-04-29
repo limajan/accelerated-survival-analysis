@@ -1,13 +1,13 @@
 ---
 title: "Accelerated survival analysis"
-output:
-  github_document:
-    math_method:
-      engine: webtex
-      url: https://latex.codecogs.com/svg.image?
-    keep_html: true
+output: 
+  html_document:
+    keep_md: true
 ---
-
+//  github_document:
+//    math_method:
+//      engine: webtex
+//      url: https://latex.codecogs.com/svg.image?
 <style>
 body {
 text-align: justify}
