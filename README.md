@@ -24,8 +24,12 @@ interesse, acelerando ou desacelerando o processo de falha (KALBFLEISCH;
 PRENTICE, 2002). Assim, para a
 ![i](https://latex.codecogs.com/svg.image?i "i")-ésima observação, um
 *AFT model* é caracterizado por sugerir que
+<p align="center">
+\<img src=
 
 ![\log(T_i) = \mathbf{x}\_i^{\top}\pmb{\beta} + \nu_i, \\\\\\\\i=1, \dots, n,](https://latex.codecogs.com/svg.image?%5Clog%28T_i%29%20%3D%20%5Cmathbf%7Bx%7D_i%5E%7B%5Ctop%7D%5Cpmb%7B%5Cbeta%7D%20%2B%20%5Cnu_i%2C%20%5C%20%5C%20%5C%20%5C%20i%3D1%2C%20%5Cdots%2C%20n%2C "\log(T_i) = \mathbf{x}_i^{\top}\pmb{\beta} + \nu_i, \ \ \ \ i=1, \dots, n,")
+
+</p>
 
 em que
 
@@ -52,8 +56,12 @@ em que
   de erro aleatório associado a cada observação.
 
 Com isso, podemos notar que
+<p align="center">
+\<img src=
 
 ![T_i = e^{\mathbf{x}\_i^{\top}\pmb{\beta}}T\_{0i} \\\\\rightarrow \\\\\nu_i = \log(T\_{0i}),](https://latex.codecogs.com/svg.image?T_i%20%3D%20e%5E%7B%5Cmathbf%7Bx%7D_i%5E%7B%5Ctop%7D%5Cpmb%7B%5Cbeta%7D%7DT_%7B0i%7D%20%5C%20%5C%20%5Crightarrow%20%5C%20%5C%20%5Cnu_i%20%3D%20%5Clog%28T_%7B0i%7D%29%2C "T_i = e^{\mathbf{x}_i^{\top}\pmb{\beta}}T_{0i} \ \ \rightarrow \ \ \nu_i = \log(T_{0i}),")
+
+</p>
 
 para o tempo de vida não moderado
 ![T_0](https://latex.codecogs.com/svg.image?T_0 "T_0") distribuído
@@ -73,6 +81,8 @@ A função de sobrevivência de
 ![T\|\mathbf{x}](https://latex.codecogs.com/svg.image?T%7C%5Cmathbf%7Bx%7D "T|\mathbf{x}")
 pode ser descrita pela função de sobrevivência de
 ![T_0](https://latex.codecogs.com/svg.image?T_0 "T_0"):
+<p align="center">
+\<img src=
 
 ![\begin{align\*} 
 \mathcal{S}(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = P\_{\pmb{\vartheta}, \pmb{\beta}}(T \> t \\\|\mathbf{x}) \\
@@ -86,12 +96,16 @@ pode ser descrita pela função de sobrevivência de
 & = \mathcal{S}_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right),
 \end{align*}")
 
+</p>
+
 sendo
 ![\pmb{\vartheta}](https://latex.codecogs.com/svg.image?%5Cpmb%7B%5Cvartheta%7D "\pmb{\vartheta}")
 um vetor de parâmetros associado à distribuição *baseline*. Dessa forma,
 é possível expressar as outras funções para o *AFT model*.
 
 **Density function**
+<p align="center">
+\<img src=
 
 ![\begin{align\*} 
 f(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\frac{\partial}{\partial t}\mathcal{S}(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) \\
@@ -107,11 +121,15 @@ f(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\frac{\partial}{\partial t
 & = f_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right)e^{-\mathbf{x}^{\top}\pmb{\beta}},
 \end{align*}")
 
+</p>
+
 com
 ![F_0(\cdot\|\pmb{\vartheta})](https://latex.codecogs.com/svg.image?F_0%28%5Ccdot%7C%5Cpmb%7B%5Cvartheta%7D%29 "F_0(\cdot|\pmb{\vartheta})")
 a função de distribuição *baseline*.
 
 **Hazard function**
+<p align="center">
+\<img src=
 
 ![\begin{align\*} 
 h(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = \frac{f(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x})}{\mathcal{S}(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x})} \\
@@ -123,7 +141,10 @@ h(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = \frac{f(t| \ \pmb{\vartheta
 & = h_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right)e^{-\mathbf{x}^{\top}\pmb{\beta}}
 \end{align*}")
 
+</p>
 **Cumulative hazard function**
+<p align="center">
+\<img src=
 
 ![\begin{align\*} 
 H(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\log\mathcal{S}(t\| \\\pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) \\
@@ -134,6 +155,8 @@ H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\log\mathcal{S}(t| \ \pmb{
 & = -\log\mathcal{S}_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right) \\
 & = H_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right).
 \end{align*}")
+
+</p>
 
 Os modelos AFT são uma ferramenta valiosa para analisar dados quando há
 covariáveis omitidas ou quando a distribuição de probabilidade
