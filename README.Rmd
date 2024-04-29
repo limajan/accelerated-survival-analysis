@@ -1,6 +1,7 @@
 ---
 title: "Accelerated survival analysis"
-output: github_document
+#output: github_document
+output: html_document
 ---
 
 <style>
