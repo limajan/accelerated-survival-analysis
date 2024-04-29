@@ -1,10 +1,6 @@
 ---
 title: "Accelerated survival analysis"
-output:
-  github_document:
-    math_method:
-      engine: webtex
-      url: https://latex.codecogs.com/svg.image?
+output: html_document
 ---
 
 <style>
@@ -17,11 +13,9 @@ Os modelos de regressão de sobrevivência de classe acelerada são um grupo de 
 ### 1 - Modelo de tempo de falha acelerado (AFT model)
 
 O *AFT model* é uma abordagem paramétrica (ou semiparamétrica) que oferece uma opção robusta de regressão em análise de sobrevivência. A ideia central por trás dos modelos AFT é que as covariáveis atuam multiplicativamente no log do tempo até a ocorrência de algum evento de interesse, acelerando ou desacelerando o processo de falha (KALBFLEISCH; PRENTICE, 2002). Assim, para a $i$-ésima observação, um *AFT model* é caracterizado por sugerir que
-<h1 align="center">
 $$
 \log(T_i) = \mathbf{x}_i^{\top}\pmb{\beta} + \nu_i, \ \ \ \ i=1, \dots, n,
 $$
-</h1>
 em que
 
 - $T_i$: $i$-ésima observação da variável aleatória que define o tempo de falha ($T>0$);
@@ -30,11 +24,9 @@ em que
 - $\nu_i$: Termo de erro aleatório associado a cada observação.
 
 Com isso, podemos notar que
-<h1 align="center">
 $$
 T_i = e^{\mathbf{x}_i^{\top}\pmb{\beta}}T_{0i} \ \ \rightarrow \ \ \nu_i = \log(T_{0i}),
 $$
-</h1>
 para o tempo de vida não moderado $T_0$ distribuído independentemente de covariáveis (*baseline*), exceto pela sua própria igualdade. Diferentes distribuições de $\nu$ implicam distribuições diferentes de $T_0$ (GEORGE; SEALS; ABAN, 2014).
 
 Com essas definições, pode-se denotar o *AFT model* em termos de funções:
@@ -42,7 +34,6 @@ Com essas definições, pode-se denotar o *AFT model* em termos de funções:
 **Survival function**
 
 A função de sobrevivência de $T|\mathbf{x}$ pode ser descrita pela função de sobrevivência de $T_0$:
-<h1 align="center">
 $$
 \begin{align*} 
 \mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = P_{\pmb{\vartheta}, \pmb{\beta}}(T > t \ |\mathbf{x}) \\
@@ -51,12 +42,10 @@ $$
 & = \mathcal{S}_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right),
 \end{align*}
 $$
-</h1>
 sendo $\pmb{\vartheta}$ um vetor de parâmetros associado à distribuição *baseline*. Dessa forma, é possível expressar as outras funções para o *AFT model*.
 
 **Density function**
 
-<h1 align="center">
 $$
 \begin{align*} 
 f(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\frac{\partial}{\partial t}\mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) \\
@@ -66,12 +55,10 @@ f(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\frac{\partial}{\partial t
 & = f_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right)e^{-\mathbf{x}^{\top}\pmb{\beta}},
 \end{align*}
 $$
-</h1>
 com $F_0(\cdot|\pmb{\vartheta})$ a função de distribuição *baseline*. 
 
 **Hazard function**
 
-<h1 align="center">
 $$
 \begin{align*} 
 h(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = \frac{f(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x})}{\mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x})} \\
@@ -79,11 +66,9 @@ h(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = \frac{f(t| \ \pmb{\vartheta
 & = h_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right)e^{-\mathbf{x}^{\top}\pmb{\beta}}
 \end{align*}
 $$
-</h1>
 
 **Cumulative hazard function**
 
-<h1 align="center">
 $$
 \begin{align*} 
 H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\log\mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) \\
@@ -91,7 +76,6 @@ H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\log\mathcal{S}(t| \ \pmb{
 & = H_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta} \right).
 \end{align*}
 $$
-</h1>
 
 Os modelos AFT são uma ferramenta valiosa para analisar dados quando há covariáveis omitidas ou quando a distribuição de probabilidade subjacente é incerta (BURZYKOWSKI, 2022).
 

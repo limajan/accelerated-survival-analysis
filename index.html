@@ -353,7 +353,6 @@ display: none;
 </div>
 
 
-// github_document: // math_method: // engine: webtex // url: <a href="https://latex.codecogs.com/svg.image" class="uri">https://latex.codecogs.com/svg.image</a>?
 <style>
 body {
 text-align: justify}
@@ -367,20 +366,16 @@ própria escala de tempo, em vez de apenas na taxa de risco. Aqui está
 uma análise dos três tipos principais (AFT, AH, AO):</p>
 <div id="modelo-de-tempo-de-falha-acelerado-aft-model" class="section level3">
 <h3>1 - Modelo de tempo de falha acelerado (AFT model)</h3>
-O <em>AFT model</em> é uma abordagem paramétrica (ou semiparamétrica)
+<p>O <em>AFT model</em> é uma abordagem paramétrica (ou semiparamétrica)
 que oferece uma opção robusta de regressão em análise de sobrevivência.
 A ideia central por trás dos modelos AFT é que as covariáveis atuam
 multiplicativamente no log do tempo até a ocorrência de algum evento de
 interesse, acelerando ou desacelerando o processo de falha (KALBFLEISCH;
 PRENTICE, 2002). Assim, para a <span class="math inline">\(i\)</span>-ésima observação, um <em>AFT model</em>
-é caracterizado por sugerir que
-<h1 align="center">
-<span class="math display">\[
+é caracterizado por sugerir que <span class="math display">\[
 \log(T_i) = \mathbf{x}_i^{\top}\pmb{\beta} + \nu_i, \ \ \ \ i=1, \dots,
 n,
-\]</span>
-</h1>
-<p>em que</p>
+\]</span> em que</p>
 <ul>
 <li><span class="math inline">\(T_i\)</span>: <span class="math inline">\(i\)</span>-ésima observação da variável aleatória
 que define o tempo de falha (<span class="math inline">\(T&gt;0\)</span>);</li>
@@ -395,23 +390,18 @@ sobrevivência), enquanto um valor negativo implica desaceleração;</li>
 <li><span class="math inline">\(\nu_i\)</span>: Termo de erro aleatório
 associado a cada observação.</li>
 </ul>
-Com isso, podemos notar que
-<h1 align="center">
-<span class="math display">\[
+<p>Com isso, podemos notar que <span class="math display">\[
 T_i = e^{\mathbf{x}_i^{\top}\pmb{\beta}}T_{0i} \ \ \rightarrow \ \ \nu_i
 = \log(T_{0i}),
-\]</span>
-</h1>
-<p>para o tempo de vida não moderado <span class="math inline">\(T_0\)</span> distribuído independentemente de
+\]</span> para o tempo de vida não moderado <span class="math inline">\(T_0\)</span> distribuído independentemente de
 covariáveis (<em>baseline</em>), exceto pela sua própria igualdade.
 Diferentes distribuições de <span class="math inline">\(\nu\)</span>
 implicam distribuições diferentes de <span class="math inline">\(T_0\)</span> (GEORGE; SEALS; ABAN, 2014).</p>
 <p>Com essas definições, pode-se denotar o <em>AFT model</em> em termos
 de funções:</p>
 <p><strong>Survival function</strong></p>
-A função de sobrevivência de <span class="math inline">\(T|\mathbf{x}\)</span> pode ser descrita pela
+<p>A função de sobrevivência de <span class="math inline">\(T|\mathbf{x}\)</span> pode ser descrita pela
 função de sobrevivência de <span class="math inline">\(T_0\)</span>:
-<h1 align="center">
 <span class="math display">\[
 \begin{align*}
 \mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; =
@@ -424,14 +414,12 @@ te^{-\mathbf{x}^{\top}\pmb{\beta}} \right) \\
 \mathcal{S}_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta}
 \right),
 \end{align*}
-\]</span>
-</h1>
-<p>sendo <span class="math inline">\(\pmb{\vartheta}\)</span> um vetor
-de parâmetros associado à distribuição <em>baseline</em>. Dessa forma, é
-possível expressar as outras funções para o <em>AFT model</em>.</p>
+\]</span> sendo <span class="math inline">\(\pmb{\vartheta}\)</span> um
+vetor de parâmetros associado à distribuição <em>baseline</em>. Dessa
+forma, é possível expressar as outras funções para o <em>AFT
+model</em>.</p>
 <p><strong>Density function</strong></p>
-<h1 align="center">
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{align*}
 f(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; =
 -\frac{\partial}{\partial t}\mathcal{S}(t| \ \pmb{\vartheta},
@@ -448,13 +436,10 @@ t}F_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta}
 &amp; = f_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta}
 \right)e^{-\mathbf{x}^{\top}\pmb{\beta}},
 \end{align*}
-\]</span>
-</h1>
-<p>com <span class="math inline">\(F_0(\cdot|\pmb{\vartheta})\)</span> a
-função de distribuição <em>baseline</em>.</p>
+\]</span> com <span class="math inline">\(F_0(\cdot|\pmb{\vartheta})\)</span> a função de
+distribuição <em>baseline</em>.</p>
 <p><strong>Hazard function</strong></p>
-<h1 align="center">
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{align*}
 h(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; = \frac{f(t| \
 \pmb{\vartheta}, \pmb{\beta}, \mathbf{x})}{\mathcal{S}(t| \
@@ -466,11 +451,9 @@ h(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; = \frac{f(t| \
 &amp; = h_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta}
 \right)e^{-\mathbf{x}^{\top}\pmb{\beta}}
 \end{align*}
-\]</span>
-</h1>
+\]</span></p>
 <p><strong>Cumulative hazard function</strong></p>
-<h1 align="center">
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{align*}
 H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; =
 -\log\mathcal{S}(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) \\
@@ -480,8 +463,7 @@ H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) &amp; =
 &amp; = H_0\left(te^{-\mathbf{x}^{\top}\pmb{\beta}}\Big|\pmb{\vartheta}
 \right).
 \end{align*}
-\]</span>
-</h1>
+\]</span></p>
 <p>Os modelos AFT são uma ferramenta valiosa para analisar dados quando
 há covariáveis omitidas ou quando a distribuição de probabilidade
 subjacente é incerta (BURZYKOWSKI, 2022).</p>
