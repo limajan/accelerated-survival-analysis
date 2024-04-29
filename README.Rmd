@@ -75,7 +75,7 @@ H(t| \ \pmb{\vartheta}, \pmb{\beta}, \mathbf{x}) & = -\log\mathcal{S}(t| \ \pmb{
 \end{align*}
 $$
 
-Os modelos AFT são uma ferramenta valiosa para analisar dados quando há covariáveis omitidas ou quando a distribuição de probabilidade subjacente é incerta (BURZYKOWSKI, 2022). Os resultados dos modelos AFT são facilmente interpretados. Assim, um paciente poderia ser informado de que se esperaria que ele vivesse (digamos) 15% mais se fizesse o novo tratamento. As taxas de risco podem ser mais difíceis de explicar em termos leigos.
+Os modelos AFT são uma ferramenta valiosa para analisar dados quando há covariáveis omitidas ou quando a distribuição de probabilidade subjacente é incerta (BURZYKOWSKI, 2022).
 
 **References:**
 
