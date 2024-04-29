@@ -5,6 +5,7 @@ output:
     math_method:
       engine: webtex
       url: https://latex.codecogs.com/svg.image?
+    keep_html: true
 ---
 
 <style>
