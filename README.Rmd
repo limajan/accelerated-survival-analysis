@@ -2,7 +2,9 @@
 title: "Accelerated survival analysis"
 output:
   github_document:
-    keep_html: true
+    math_method:
+      engine: webtex
+      url: https://latex.codecogs.com/svg.image?
 ---
 
 ```{r setup, include=FALSE}
